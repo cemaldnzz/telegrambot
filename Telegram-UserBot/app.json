@@ -1,0 +1,97 @@
+{
+  "name": "Telegram-UserBot",
+  "description": "Telegram UserBot",
+  "logo": "https://i.imgur.com/ZLi4nDP.jpg",
+  "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/NaytSeyd/Telegram-UserBot",
+  "website":   "https://github.com/RaphielGang/Telegram-UserBot/wiki",
+  "success_url": "https://t.me/userbot_announcements",
+  "env": {
+    "API_KEY": {
+      "description": "Get this value from my.telegram.org.",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "value": ""
+    },
+    "STRING_SESSION": {
+      "description": "Get this value by running python3 string_session.py locally",
+      "value": ""
+    },
+    "OPEN_WEATHER_MAP_APPID": {
+      "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+      "required": false
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "Get your own API_KEY from https://console.cloud.google.com",
+      "required": false
+    },
+    "DEFAULT_BIO": {
+      "description": "Get your own SPOTIFY DEFAULT_BIO from https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_USERNAME": {
+      "description": "Get your own SPOTIFY_USERNAME https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_PASS": {
+      "description": "Get your own SPOTIFY_PASS from https://www.spotify.com",
+      "required": false
+    },
+    "SPOTIFY_BIO_PREFIX": {
+      "description": "Get your own SPOTIFY_BIO_PREFIX from https://www.spotify.com Example: GitHub: MacTavishAO : Skillet - Feel Invincible",
+      "required": false
+    },
+    "SCREEN_SHOT_LAYER_ACCESS_KEY": {
+      "description": "Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture",
+      "required": false
+    },
+    "BOTLOG": {
+      "description": "Incase you want to turn off logging, put this to false",
+      "value": "",
+      "required": false
+    },
+    "BOTLOG_CHATID": {
+      "description": "ChatID for the Log group",
+      "value": "",
+      "required": false
+    },
+    "CONSOLE_LOGGER_VERBOSE": {
+      "description": "If you need Verbosity on the Logging",
+      "value": "",
+      "required": false
+    },
+    "PM_AUTO_BAN": {
+      "description": "PM Auto-Ban Feature Switch",
+      "required": false
+    },
+    "BUILD_CHOICE": {
+      "description": "Build Choice Bleeding or Stable",
+      "required": false
+    },
+    "UPDATER": {
+      "description": "*cough* Heroku *cough*.",
+      "value": "False"
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "9.5"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  },{
+    "url": "heroku-community/apt"
+    }]
+}
